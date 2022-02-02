@@ -1,0 +1,652 @@
+@import url(fonts.css);
+
+:root {
+    --color1: #11D6BB;
+    --color2: #FEC015;
+    --mainfont: inter;
+    --font2: cav;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: var(--mainfont);
+}
+
+main {
+    width: 100%;
+    min-height: 700px;
+}
+
+header {
+    width: 100%;
+    height: 90vh;
+    background: url(../images/b1.jpg) no-repeat center/cover;
+}
+
+#logo {
+    width: 100%;
+    min-height: 60px;
+    color: white;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#logo h1 {
+    margin-top: 0px;
+}
+
+nav {
+    width: 550px;
+    min-height: 60px;
+}
+
+nav ul li {
+    width: 80px;
+    height: 60px;
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 60px;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: var(--color2);
+    cursor: pointer;
+}
+
+header aside:first-of-type {
+    width: max(28%, 150px);
+    height: 28%;
+    border: 5px solid var(--color2);
+    position: absolute;
+    top: 32%;
+    left: 20%;
+    background: transparent;
+}
+
+header aside:last-of-type {
+    width: max(30%, 150px);
+    height: 27%;
+    background: rgba(255, 255, 255, 0.856);
+    position: absolute;
+    top: 47%;
+    left: 25%;
+    padding: 20px;
+}
+
+header h3 {
+    color: black;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+header h4 {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--color1);
+}
+
+/* ************************************* */
+#about {
+    width: 100%;
+    min-height: 450px;
+    padding-top: 75px;
+    padding-left: 20%;
+}
+
+.container {
+    width: 85%;
+    min-height: 320px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.card1,
+.card2,
+.card4 {
+    width: 200px;
+    height: 300px;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+
+.front1,
+.front2,
+.front4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: -2px -2px 5px rgb(63, 62, 62);
+}
+
+.front1 {
+    background: url(../images/ab1.jpg) no-repeat;
+}
+
+.front2 {
+    background: url(../images/ab2.jpg) no-repeat;
+}
+
+.front4 {
+    background: url(../images/ab3.jpg) no-repeat;
+}
+
+.back1,
+.back2,
+.back4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    color: #000;
+    padding: 50px;
+    box-sizing: border-box;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.card1:hover,
+.card2:hover,
+.card4:hover {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.card3 {
+    width: 210px;
+    min-height: 300px;
+    box-shadow: 0px 0px 2px rgb(63, 62, 62);
+    padding-left: 10px;
+}
+
+.card3 p {
+    line-height: 20px;
+    font-size: 14px;
+}
+
+/* ************************************ */
+.adventure {
+    width: 100%;
+    min-height: 380px;
+    background: url(../images/b3.jpg) no-repeat center/cover;
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.adventure aside {
+    width: max(70%, 155px);
+    min-height: 190px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.adventure aside div {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: 2px solid white;
+    color: var(--color2);
+    padding: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.adventure aside div i {
+    color: white;
+    font-size: 33px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* *********************************** */
+#contact,
+#services,
+#gallery,
+#booking {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+    font-family: var(--font2);
+    font-size: 32px;
+}
+
+h2 {
+    color: var(--color2);
+    font-size: 26px;
+    font-weight: 500;
+}
+
+/* ******************* */
+.services {
+    width: 100%;
+    min-height: 450px;
+    margin-top: 40px
+}
+
+.box {
+    width: 70%;
+    min-height: 380px;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.box div {
+    width: 285px;
+    height: 165px;
+    padding-left: 20px;
+    padding-top: 30px;
+    box-shadow: 0 0 5px rgb(138, 136, 136);
+}
+
+.box div i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+/* *************************** */
+.tour {
+    width: 100%;
+    min-height: 280px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.tour img {
+    width: max(50%, 400px);
+    min-height: 280px;
+}
+
+.tour div:first-of-type {
+    width: max(50%, 400px);
+    min-height: 360px;
+    background: #EAEAEA;
+    padding: 70px;
+}
+
+h3 {
+    word-spacing: 5px;
+    line-height: 50px;
+    color: var(--color1);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.tour p,
+.services p,
+#dolor p,
+.booking p {
+    font-size: 14px;
+    line-height: 25px;
+    color: rgb(167, 166, 166);
+}
+
+.tour div:last-of-type {
+    width: 25%;
+    height: 45%;
+    border: 5px solid var(--color1);
+    position: absolute;
+    top: 15%;
+    left: 28%;
+    background: transparent;
+}
+
+/* ***************************************** */
+.gallery {
+    width: 100%;
+    min-height: 550px;
+    padding-top: 40px;
+}
+
+.gallery div {
+    width: 70%;
+    min-height: 450px;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.gallery div img {
+    width: max(23.5%, 200px);
+    height: 48%;
+}
+
+.gallery div img:nth-of-type(3),
+.gallery div img:nth-of-type(4) {
+    width: max(49%, 200px);
+    height: 48%;
+}
+
+/* ***************************************** */
+
+#dolor {
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first {
+    width: max(50%, 400px);
+    min-height: 350px;
+    background: #EAEAEA;
+    padding: 100px;
+}
+
+.second {
+    width: max(50%, 400px);
+    min-height: 350px;
+    background: url(../images/b4.jpg) no-repeat center/cover;
+    padding: 100px;
+}
+
+.third {
+    width: max(50%, 400px);
+    min-height: 350px;
+    background: url(../images/g6.jpg) no-repeat center/cover;
+    padding: 100px;
+}
+
+.forth {
+    width: max(50%, 400px);
+    min-height: 350px;
+    background: #EAEAEA;
+    padding: 100px;
+
+}
+
+h6 {
+    font-size: 12px;
+    color: rgb(167, 166, 166);
+}
+
+span {
+    padding: 10px 20px;
+    background: rgb(65, 64, 64);
+    font-size: 12px;
+    color: white;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+span:hover {
+    background: var(--color1);
+    cursor: pointer;
+}
+
+/* ***************************************** */
+.booking {
+    width: 100%;
+    min-height: 450px;
+    padding-top: 40px;
+}
+
+.booking>div {
+    width: 65%;
+    min-height: 400px;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.one,
+.two,
+.three,
+.four {
+    width: max(23%, 200px);
+}
+
+.one img,
+.two img,
+.three img,
+.four img {
+    width: 100%;
+}
+
+.one h2,
+.two h2,
+.three h2,
+.four h2 {
+    font-size: 17px;
+    line-height: 50px;
+}
+
+.one a,
+.two a,
+.three a,
+.four a {
+    color: var(--color1);
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+pre {
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ***************************************** */
+
+.sub {
+    width: 100%;
+    min-height: 280px;
+    background: url(../images/b4.jpg) no-repeat center/cover;
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.sub form {
+    width: max(35%, 200px);
+    min-height: 70px;
+    margin: 35px auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.356);
+
+}
+
+.sub [type="email"] {
+    width: max(290px, 200px);
+    height: 42px;
+    border: none;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.sub [type="submit"] {
+    width: max(130px, 50px);
+    height: 42px;
+    border: none;
+    margin-right: 10px;
+    color: white;
+    background: var(--color1);
+}
+
+/*********************************************/
+.cont {
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+map iframe {
+    width: max(500px, 200px);
+    height: 300px;
+    margin-bottom: 50px;
+}
+
+.cont form {
+    width: max(500px, 200px);
+    min-height: 300px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+fieldset {
+    border: none;
+}
+
+.cont form input {
+    width: max(240px, 150px);
+    height: 40px;
+    padding-left: 10px;
+}
+
+.cont form textarea {
+    width: max(500px, 200px);
+    height: 140px;
+    resize: none;
+    padding: 10px;
+}
+
+.cont form [type="submit"] {
+    width: max(500px, 200px);
+    height: 30px;
+    background: var(--color1);
+    color: white;
+}
+
+/*********************************************/
+#addr {
+    width: 100%;
+    min-height: 300px;
+    background-color: rgb(49, 48, 48);
+    color: white;
+    padding-top: 5%;
+}
+
+#addr div {
+    width: max(20%, 300px);
+    height: 50%;
+    margin: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.icon a img {
+    width: 30px;
+    margin-top: 10px;
+}
+
+#addr a {
+    text-decoration: none;
+    color: white;
+}
+
+[href="#logo"] {
+    display: block;
+}
+
+/**********************************************/
+footer {
+    width: 100%;
+    min-height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: black;
+    color: white;
+}
+
+@media screen and (max-width:500px) {
+    header aside:first-of-type {
+        width: 150px;
+    }
+
+    header aside:last-of-type {
+        width: 150px;
+    }
+
+    header h4 {
+        font-size: 25px;
+    }
+    header aside:first-of-type {
+        display: none;
+        
+    }
+    
+    header aside:last-of-type {
+        height: 200px;
+        width:200px;
+        
+    }
+    .tour div:last-of-type {
+        display: none;
+    }
+    map iframe {
+        width: 300px;
+
+    }
+
+    .cont form {
+        width: 400px;
+    }
+
+    .cont form input {
+        width: 200px;
+
+    }
+
+    .cont form textarea {
+        width: 200px;
+
+    }
+
+    .cont form [type="submit"] {
+        width: 200px;
+    }
+}
